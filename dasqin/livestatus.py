@@ -49,7 +49,10 @@ async def GetLiveStatus(bot: Client, updates_channel_id: int):
                            f"**Oyun vəziyyəti:** `{status}`\n\n" \
                            f"**Oyun neçənci dəqiqədədi:** `{liveTime}`\n\n" \
                            f"**Komandalar:** `{data['leagues'][i]['matches'][x]['home']['name']}`  __VS__  `{data['leagues'][i]['matches'][x]['away']['name']}`\n\n" \
-                           f"**Skor:** `{score}`"
+                           f"**Nəticə:** `{score}`"
+                           button = [
+            [InlineKeyboardButton(text = 'Oyunu Paylaş', url="https://telegram.me/share/url?url=https://t.me/ndfutbol")],
+        ]
                     if MessagesDB.get(data["leagues"][i]["matches"][x]["id"], None) is None:
                         message = await SendMessage(bot, text, updates_channel_id)
                         MessagesDB[data["leagues"][i]["matches"][x]["id"]] = message
@@ -66,7 +69,10 @@ async def GetLiveStatus(bot: Client, updates_channel_id: int):
                                f"**Oyun Tarixi:** `{firstMatchTime}`\n\n" \
                                f"**Oyun Vəziyyəti:** `{status if (status == 'Finished') else status_reason}`\n\n" \
                                f"**Komandalar:** `{data['leagues'][i]['matches'][x]['home']['name']}`  __VS__  `{data['leagues'][i]['matches'][x]['away']['name']}`\n\n" \
-                               f"**Skor:** `{score}`"
+                               f"**Nəticə:** `{score}`"
+                               button = [
+            [InlineKeyboardButton(text = 'Oyunu Paylaş', url="https://telegram.me/share/url?url=https://t.me/ndfutbol")],
+        ]
                         editable: Message = MessagesDB[data["leagues"][i]["matches"][x]["id"]]
                         await EditMessage(editable, text)
         print("60s-lik fasilə...")
