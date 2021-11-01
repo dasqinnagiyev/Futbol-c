@@ -2,7 +2,7 @@
 Bot [Fotmob](https://www.fotmob.com/) Yeniləmələrini kanalda paylaşır.
 
 ### Demo Kanalı
-<a href="https://t.me/dfutbol"><img src="https://img.shields.io/badge/Demo-Telegram%20Channel-blue.svg?logo=telegram"></a>
+<a href="https://t.me/ndfutbol"><img src="https://img.shields.io/badge/Demo-Telegram%20Channel-blue.svg?logo=telegram"></a>
 
 ## Konfiqurasiyalar
 - `API_ID` - Bu dəyəri my.telegram.org saytından əldə et)
