@@ -50,9 +50,11 @@ async def GetLiveStatus(bot: Client, updates_channel_id: int):
                            f"**Oyun neçənci dəqiqədədi:** `{liveTime}`\n\n" \
                            f"**Komandalar:** `{data['leagues'][i]['matches'][x]['home']['name']}`  __VS__  `{data['leagues'][i]['matches'][x]['away']['name']}`\n\n" \
                            f"**Nəticə:** `{score}`"
-                           button = [
-            [InlineKeyboardButton(text = 'Oyunu Paylaş', url="https://telegram.me/share/url?url=https://t.me/ndfutbol")],
-        ]
+                           markup = types.InlineKeyboardMarkup()
+
+for url in stringList.items():
+    markup.add(types.InlineKeyboardButton(text=Oyunu Paylaş,
+                                          callback_data="['url', url="https://telegram.me/share/url?url=https://t.me/ndfutbol")
                     if MessagesDB.get(data["leagues"][i]["matches"][x]["id"], None) is None:
                         message = await SendMessage(bot, text, updates_channel_id)
                         MessagesDB[data["leagues"][i]["matches"][x]["id"]] = message
