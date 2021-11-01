@@ -33,7 +33,7 @@ def thread0():
 def thread1():
     @Bot1.on_message(filters.command("start"))
     async def start_command(_, event: Message):
-        await event.reply_text("Salam, @daqobots'a məxsusdur.")
+        await event.reply_text("Salam, bot @daqobots'a məxsusdur.")
 
     Bot1.run()
 
