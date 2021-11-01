@@ -1,0 +1,40 @@
+{
+    "name": "Telegram Fotmob botu",
+    "description": "by @dasqinnagiyev",
+    "keywords": [
+        "telegram",
+        "fotmob",
+        "matches",
+        "updates",
+        "bot"
+    ],
+    "repository": "https://github.com/dasqinnagiyev/Futbol-c",
+    "website": "https://telegram.dog/dasqinnagiyev",
+    "success_url": "https://t.me/daqobots",
+    "env": {
+        "API_ID": {
+            "description": "Bu dəyəri my.telegram.org saytından əldə et"
+        },
+        "API_HASH": {
+            "description": "Bu dəyəri my.telegram.org saytından əldə et"
+        },
+        "BOT_TOKEN": {
+            "description": "Botunun tokeni. @BotFather"
+        },
+        "STATUS_UPDATE_CHANNEL_ID": {
+            "description": "Kanalının ID."
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "stack": "heroku-20",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
